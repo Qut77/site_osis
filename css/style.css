@@ -82,3 +82,35 @@ body{
     transition: 0.5s;
     border-radius: 90px;
 }
+
+.section1_wrapper{
+    background: url(../image/background.png) center/cover no-repeat;
+}
+.section1{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section1 p{
+    font-family: 'Rubik-regular';
+    color: #B4B6B6;
+    font-size: 22px;
+    margin-top: 18px;
+}
+.section1 button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D79252;
+    width: 100%;
+    height: 100%;
+    max-width: 220px;
+    max-height: 64px;
+    border-radius: 5px;
+    font-family: 'Ubuntu-Regular';
+    font-size: 19px;
+    margin-top: 47px;
+    border: none;    
+}
