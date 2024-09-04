@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Rubik-regular';
+    src: url(../fonts/Rubik-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik-medium';
+    src: url(../fonts/Rubik-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-regular';
+    src: url(../fonts/Ubuntu-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-medium';
+    src: url(../fonts/Ubuntu-Medium.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.header_wrapper{
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    background-color: #879DFF;
+}
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 48px;
+}
+.link{
+    font-family: 'Rubik-regular';
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+}
+.link:hover:after {
+    width: 100%;
+}
+.link::after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FCAB5E;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    border-radius: 90px;
+}
