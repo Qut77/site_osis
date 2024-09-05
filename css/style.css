@@ -114,3 +114,55 @@ body{
     margin-top: 47px;
     border: none;    
 }
+
+.section2_wrapper{
+    background-color: #fff;
+}
+.section2{
+    padding: 118px 0 163px;
+}
+.section2 h2{
+    font-family: 'Rubik-medium';
+    font-size: 58px;
+    margin-bottom: 32px;
+}
+.section2 p{
+    font-family: 'Ubuntu-regular';
+    font-size: 22px;
+    margin-bottom: 51px;
+}
+.section2 span{
+    font-family: 'Ubuntu-medium';
+    font-size: 25px;
+    color: #FCAB5E;
+}
+.stadi{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.block{
+    width: 228px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block p{
+    font-family: 'Ubuntu-regular';
+    font-size: 20px;
+    text-align: center;
+    margin: 22px 0 0;
+}
+
+
+
+@media (max-width:1440px) {
+    .container{
+        max-width: 1024px;
+    }
+}
+@media (max-width:1024px) {
+    .container{
+        max-width: 768px;
+    }
+}
