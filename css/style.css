@@ -42,7 +42,7 @@ body{
 .header_wrapper{
     width: 100%;
     position: fixed;
-    height: 100px;
+    height: 5em;
     background-color: #879DFF;
 }
 .header{
@@ -51,6 +51,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 .links{
     display: grid;
@@ -114,7 +115,6 @@ body{
     margin-top: 47px;
     border: none;    
 }
-
 .section2_wrapper{
     background-color: #fff;
 }
@@ -159,14 +159,14 @@ body{
 .section3 h2{
     font-family: 'Rubik-medium';
     font-size: 58px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .section3 .cell{
     margin-top: 20px;
     width: 100%;
     padding: 56px 0 62px 105px;
-    background-color: rgba(105, 133, 255, 0.3);
-    background-image: linear-gradient(135deg, rgba(105, 133, 255, 0.3) 0%, rgba(237, 30, 30, 0.2) 100%);
+    background-color: rgba(105, 133, 255, 0.4);
+    background-image: linear-gradient(135deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     border-radius: 20px;
 }
 .section3 .cell h3{
@@ -178,8 +178,74 @@ body{
     font-family: 'Ubuntu-regular';
     font-size: 22px;
 }
+.section4_wrapper{
+    background-color: #B3C1FF;
+}
+.section4{
+    padding: 150px 0 236px;
+}
+.section4 h2{
+    font-family: 'Rubik-medium';
+    font-size: 58px;
+    margin-bottom: 128px;
+}
+.section4 .projects{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+.section4 .projects .project{
+    width: 100%;
+    max-width: 700px;
+    background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
+    padding: 17px 25px 30px 25px;
+    border-radius: 20px;
+}
+.section4 .projects .project h3{
+    font-family: 'Rubik-medium';
+    font-size: 30px;
+    margin-top: 10px;
+}
+.details {
+    display: block;
+    transition: 0.3s;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.details[open] {
+    /* Место под текст */
+    padding-bottom: 50px;
+}
+.details[open] .details__title {
+    /* Позиционирование текста   */
+    margin-bottom: 20px; 
+}
+.details__title {
+    font-family: 'Ubuntu-regular';
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+    list-style: none;
 
+}
+.details__content {
+    font-family: 'Ubuntu-regular';
+    font-size: 18px;
+    margin-bottom: -50px;
+    animation: animatetop 0.5s ease-in-out;
+}
+@keyframes animatetop {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
 
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
 @media (max-width:1440px) {
     .container{
         max-width: 1024px;
