@@ -113,7 +113,8 @@ body{
     font-family: 'Ubuntu-Regular';
     font-size: 19px;
     margin-top: 47px;
-    border: none;    
+    border: none;
+    cursor: pointer;
 }
 .section2_wrapper{
     background-color: #fff;
@@ -245,6 +246,115 @@ body{
         bottom: 0;
         opacity: 1;
     }
+}
+.section5_wrapper{
+    width: 100%;
+    padding: 50px 0;
+}
+.section5_wrapper .section5 h2, .section6 h2{
+    font-family: 'Rubik-medium';
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.section5_wrapper .section5 .table{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.section5_wrapper .section5 .table .cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 30%;
+    border-radius: 20px;
+    background: rgba(105, 133, 255, 0.3);
+    background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
+    padding: 53px 30px;
+}
+.section5_wrapper .section5 .table .cell h3{
+    font-family: 'Ubuntu-regular';
+    font-size: 28px;
+}
+.section5_wrapper .section5 .table .cell p{
+    font-family: 'Ubuntu-regular';
+    font-size: 18px;
+    max-height: 0;
+    overflow: hidden;
+}
+.section5_wrapper .section5 .table .cell:hover p {
+    animation: niceShow .7s ease-out forwards;
+    margin-top: 20px
+}
+.section5_wrapper .section5 .table>.cell {
+    height: 250px
+}
+@keyframes niceShow {
+    0% {
+        max-height: 0
+    }
+
+    100% {
+        max-height: 100%
+    }
+}
+.section6{
+    padding: 50px 0;
+}
+footer{
+    background: rgba(105, 133, 255, 0.8);
+}
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+}
+.silki{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.navigation, .tel, .mesto, .pochta {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.silki p,  .silki a{
+    font-family: 'Ubuntu-regular';
+    font-size: 18px;
+    color: #fff;
+}
+.silki a{
+    text-decoration: none;
+}
+.silki .zaglav{
+    font-family: 'Rubik-medium';
+    font-size: 22px;
+    color: #fff;
+}
+.silki button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #879DFF;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    height: 55px;
+    width: 100%;
+    max-width: 230px;
+    font-family: 'Ubuntu-medium';
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+.footer_logo{
+    margin: 20px 0;
+}
+.prava{
+    font-family: 'Ubuntu-regular';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
 }
 @media (max-width:1440px) {
     .container{
