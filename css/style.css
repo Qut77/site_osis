@@ -56,7 +56,7 @@ body{
 .links{
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 48px;
 }
 .link{
@@ -120,7 +120,7 @@ body{
     background-color: #fff;
 }
 .section2{
-    padding: 118px 0 163px;
+    padding: 100px 0 100px;
 }
 .section2 h2{
     font-family: 'Rubik-medium';
@@ -139,7 +139,7 @@ body{
 }
 .stadi{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .block{
@@ -157,6 +157,12 @@ body{
 .section3{
     padding-bottom: 80px;
 }
+.section3 .prob_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
 .section3 h2{
     font-family: 'Rubik-medium';
     font-size: 58px;
@@ -164,8 +170,8 @@ body{
 }
 .section3 .cell{
     margin-top: 20px;
-    width: 100%;
-    padding: 56px 0 62px 105px;
+    width: 45%;
+    padding: 56px 60px 62px 60px;
     background-color: rgba(105, 133, 255, 0.4);
     background-image: linear-gradient(135deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     border-radius: 20px;
@@ -183,7 +189,7 @@ body{
     background-color: #B3C1FF;
 }
 .section4{
-    padding: 150px 0 236px;
+    padding: 100px 0 100px;
 }
 .section4 h2{
     font-family: 'Rubik-medium';
@@ -192,13 +198,12 @@ body{
 }
 .section4 .projects{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 50px;
 }
 .section4 .projects .project{
-    width: 100%;
-    max-width: 700px;
+    width: 45%;
     background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     padding: 17px 25px 30px 25px;
     border-radius: 20px;
@@ -360,9 +365,87 @@ footer{
     .container{
         max-width: 1024px;
     }
+    .header_wrapper{
+        height: 4em;
+    }
+    .menu_logo{
+        height: 3em;
+    }
 }
 @media (max-width:1024px) {
     .container{
         max-width: 768px;
+    }
+    .links{
+        gap: 24px;
+    }
+    .link{
+        font-size: 14px;
+    }
+    .section1 img{
+        width: 100%;
+        max-width: 250px;
+    }
+    .section1 p{
+        font-size: 18px;
+    }
+    .section1 button{
+        max-width: 180px;
+        max-height: 48px;
+        font-size: 16px;
+    }
+    .stadi{
+        gap: 50px;
+    }
+    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2{
+        font-size: 40px;
+    }
+    .section2 p{
+        font-size: 20px;
+    }
+    .section2 span{
+        font-size: 22px;
+    }
+    .section3 .cell{
+        padding: 36px 40px 42px 40px;
+    }
+    .section3 .cell h3{
+        font-size: 24px;
+    }
+    .section3 .cell li{
+        font-size: 20px;
+    }
+    .section4 h2{
+        margin-bottom: 80px;
+    }
+    .section4 .projects .project .icon{
+        width: 100%;
+        max-width: 50px;
+    }
+    .section4 .projects .project h3{
+        font-size: 24px;
+    }
+    .section5_wrapper .section5 .table .cell{
+        padding: 30px 20px;
+    }
+    .details__title{
+        font-size: 18px;
+    }
+    .details__content{
+        font-size: 16px;
+    }
+    .silki p,  .silki a{
+        font-size: 14px;
+    }
+    .silki .zaglav{
+        font-size: 16px;
+    }
+    .silki button{
+        height: 45px;
+        max-width: 180px;
+        font-size: 14px;
+    }
+    .block p{
+        font-size: 16px;
     }
 }

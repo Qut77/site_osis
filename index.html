@@ -11,26 +11,27 @@
     <div class="header_wrapper">
         <div class="container">
             <div class="header">
-                <a href=""><img src="image/Logo.svg" alt=""></a>
+                <a href="#main"><img src="image/Logo.svg" alt="" class="menu_logo"></a>
                 <div class="links">
-                    <a href="" class="link">о компании</a>
-                    <a href="" class="link">задачи</a>
-                    <a href="" class="link">проекты</a>
-                    <a href="" class="link">партнеры</a>
-                    <a href="" class="link">контакты</a>
+                    <a href="#about" class="link">о компании</a>
+                    <a href="#prob" class="link">задачи</a>
+                    <a href="#proj" class="link">проекты</a>
+                    <a href="#part" class="link">партнеры</a>
                 </div>
             </div>
         </div>
     </div>
+    <div id="main"></div>
     <div class="section1_wrapper">
         <div class="container">
             <div class="section1">
                 <img src="image/full_logo.png" alt="">
                 <p>Разработка компьютерного ПО</p>
-                <button>Подробнее</button>
+                <button onclick="window.location.href='#about'">Подробнее</button>
             </div>
         </div>
     </div>
+    <div id="about"></div>
     <div class="section2_wrapper">
         <div class="container">
             <div class="section2">
@@ -58,61 +59,65 @@
             </div>
         </div>
     </div>
+    <div id="prob"></div>
     <div class="section3_wrapper">
         <div class="container">
             <div class="section3">
                 <h2>Задачи и сферы деятельности</h2>
-                <div class="cell">
-                    <h3>Разработка информационных систем</h3>
-                    <ul>
-                        <li>Сбор и обработка требований;</li>
-                        <li>Оценка и планирование работ;</li>
-                        <li>Разработка технического задания и спецификаций;</li>
-                        <li>Проектирование системы;</li>
-                        <li>Разработка интерфейсов и отчетности;</li>
-                        <li>Написание кода;</li>
-                        <li>Тестирование и контроль качества разрабатываемого приложения;</li>
-                        <li>Подготовка сопровождающей документации;</li>
-                        <li>Сдача системы в эксплуатацию;</li>
-                        <li>Сопровождение системы — вторая и третья линии технической поддержки.</li>
-                    </ul>
-                </div>
-                <div class="cell">
-                    <h3>IT-аутсорсинг для комплексного решения ИТ задач</h3>
-                    <ul>
-                        <li>ИТ аутсорсинг: полная или частичная передача обязанностей по администрированию технической инфраструктуры организаций;</li>
-                        <li>Поддержка пользователей 1 и 2 уровней.</li>
-                    </ul>
-                </div>
-                <div class="cell">
-                    <h3>Информационная безопасность</h3>
-                    <ul>
-                        <li>Проверки текущего состояния защиты ИТ-инфраструктуры;</li>
-                        <li>Выявления потенциальных угроз и уязвимостей;</li>
-                        <li>Сбор и анализ данных аудита;</li>
-                        <li>Выработка рекомендаций, подготовка аудиторского отчета.</li>
-                    </ul>
-                </div>
-                <div class="cell">
-                    <h3>Управление и мониторинг ИТ-инфраструктуры</h3>
-                    <ul>
-                        <li>Контролировать любые процессы цифровых сетей в режиме 24/7;</li>
-                        <li>Получать информацию о сбоях и рисках для ИТ персонала компании;</li>
-                        <li>Автоматизировать процессы обновления ПО (программного обеспечения);</li>
-                        <li>Централизовано управлять всеми сетевыми процессами из единого АРМ (автоматизированного рабочего места);</li>
-                        <li>Сократить расходы на содержание инфраструктуры за счет централизации администрирования.</li>
-                    </ul>
+                <div class="prob_cont">
+                    <div class="cell">
+                        <h3>Разработка информационных систем</h3>
+                        <ul>
+                            <li>Сбор и обработка требований;</li>
+                            <li>Оценка и планирование работ;</li>
+                            <li>Разработка технического задания и спецификаций;</li>
+                            <li>Проектирование системы;</li>
+                            <li>Разработка интерфейсов и отчетности;</li>
+                            <li>Написание кода;</li>
+                            <li>Тестирование и контроль качества разрабатываемого приложения;</li>
+                            <li>Подготовка сопровождающей документации;</li>
+                            <li>Сдача системы в эксплуатацию;</li>
+                            <li>Сопровождение системы — вторая и третья линии технической поддержки.</li>
+                        </ul>
+                    </div>
+                    <div class="cell">
+                        <h3>IT-аутсорсинг для комплексного решения ИТ задач</h3>
+                        <ul>
+                            <li>ИТ аутсорсинг: полная или частичная передача обязанностей по администрированию технической инфраструктуры организаций;</li>
+                            <li>Поддержка пользователей 1 и 2 уровней.</li>
+                        </ul>
+                    </div>
+                    <div class="cell">
+                        <h3>Информационная безопасность</h3>
+                        <ul>
+                            <li>Проверки текущего состояния защиты ИТ-инфраструктуры;</li>
+                            <li>Выявления потенциальных угроз и уязвимостей;</li>
+                            <li>Сбор и анализ данных аудита;</li>
+                            <li>Выработка рекомендаций, подготовка аудиторского отчета.</li>
+                        </ul>
+                    </div>
+                    <div class="cell">
+                        <h3>Управление и мониторинг ИТ-инфраструктуры</h3>
+                        <ul>
+                            <li>Контролировать любые процессы цифровых сетей в режиме 24/7;</li>
+                            <li>Получать информацию о сбоях и рисках для ИТ персонала компании;</li>
+                            <li>Автоматизировать процессы обновления ПО (программного обеспечения);</li>
+                            <li>Централизовано управлять всеми сетевыми процессами из единого АРМ (автоматизированного рабочего места);</li>
+                            <li>Сократить расходы на содержание инфраструктуры за счет централизации администрирования.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="proj"></div>
     <div class="section4_wrapper">
         <div class="container">
             <div class="section4">
                 <h2>Наши проекты</h2>
                 <div class="projects">
                     <div class="project">
-                        <img src="image/gerb_sahalinskoy_oblasti 1.png" alt="">
+                        <img src="image/gerb_sahalinskoy_oblasti 1.png" alt="" class="icon">
                         <h3>Сахалин Конфликтные комиссии</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -122,7 +127,7 @@
                         </details>
                     </div>
                     <div class="project">
-                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="">
+                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="" class="icon">
                         <h3>Оренбург Конфликтные комиссии</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -132,7 +137,7 @@
                         </details>
                     </div>
                     <div class="project">
-                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="">
+                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="" class="icon">
                         <h3>Оренбург Губернаторский конкурс</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -146,7 +151,7 @@
                         </details>
                     </div>
                     <div class="project">
-                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="">
+                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="" class="icon">
                         <h3>Оренбург Мобильное приложение</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -162,7 +167,7 @@
                         </details>
                     </div>
                     <div class="project">
-                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="">
+                        <img src="image/gerb_orenburgskoj_oblasti 3.png" alt="" class="icon">
                         <h3>Оренбург Цифровой профиль</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -175,7 +180,7 @@
                         </details>
                     </div>
                     <div class="project">
-                        <img src="image/gerb_kirovskoy_oblasti 1.png" alt="">
+                        <img src="image/gerb_kirovskoy_oblasti 1.png" alt="" class="icon">
                         <h3>Киров Цифровые регламенты</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -189,7 +194,7 @@
                         </details>
                     </div>
                     <div class="project">
-                        <img src="image/gerb-pskovskoj-oblasti 1.png" alt="">
+                        <img src="image/gerb-pskovskoj-oblasti 1.png" alt="" class="icon">
                         <h3>Псков Центр опережающей подготовки</h3>
                         <details class="details">
                             <summary class="details__title">Подробнее <img src="image/Arrow.svg" alt=""></summary>
@@ -232,6 +237,7 @@
             </div>
         </div>
     </div>
+    <div id="part"></div>
     <div class="section6_wrapper">
         <div class="container">
             <div class="section6">
@@ -263,11 +269,10 @@
                 <div class="silki">
                     <div class="navigation">
                         <p class="zaglav">Навигация</p>
-                        <a href="">О компании</a>
-                        <a href="">Задачи</a>
-                        <a href="">Проекты</a>
-                        <a href="">Партнеры</a>
-                        <a href="">Контакты</a>
+                        <a href="#about">О компании</a>
+                        <a href="#prob">Задачи</a>
+                        <a href="#proj">Проекты</a>
+                        <a href="#part">Партнеры</a>
                     </div>
                     <div class="tel">
                         <p class="zaglav">Звонок нам</p>
@@ -288,5 +293,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
