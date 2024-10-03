@@ -30,14 +30,12 @@
 body{
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
 }
 .container{
     width: 100%;
     height: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    /* background-color: red; */
 }
 .header_wrapper{
     width: 100%;
@@ -94,33 +92,39 @@ body{
     justify-content: center;
     align-items: center;
 }
+.section1 img{
+    width: 100%;
+    max-width: 250px;
+}
 .section1 p{
     font-family: 'Rubik-regular';
     color: #B4B6B6;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 18px;
 }
-.section1 button{
+.section1 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #D79252;
     width: 100%;
     height: 100%;
-    max-width: 220px;
-    max-height: 64px;
+    max-width: 200px;
+    max-height: 60px;
     border-radius: 5px;
     font-family: 'Ubuntu-Regular';
     font-size: 19px;
     margin-top: 47px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    color: #000;
 }
-.section2_wrapper{
+.section2_wrapper, .section4_wrapper{
     background-color: #fff;
 }
 .section2{
-    padding: 100px 0 100px;
+    padding: 70px 0 70px;
 }
 .section2 h2{
     font-family: 'Rubik-medium';
@@ -155,7 +159,7 @@ body{
     margin: 22px 0 0;
 }
 .section3{
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 .section3 .prob_cont{
     display: flex;
@@ -174,7 +178,7 @@ body{
     padding: 56px 60px 62px 60px;
     background-color: rgba(105, 133, 255, 0.4);
     background-image: linear-gradient(135deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .section3 .cell h3{
     font-family: 'Rubik-medium';
@@ -185,16 +189,13 @@ body{
     font-family: 'Ubuntu-regular';
     font-size: 22px;
 }
-.section4_wrapper{
-    background-color: #B3C1FF;
-}
 .section4{
-    padding: 100px 0 100px;
+    padding: 70px 0 70px;
 }
 .section4 h2{
     font-family: 'Rubik-medium';
     font-size: 58px;
-    margin-bottom: 128px;
+    margin-bottom: 80px;
 }
 .section4 .projects{
     display: flex;
@@ -206,7 +207,7 @@ body{
     width: 45%;
     background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     padding: 17px 25px 30px 25px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .section4 .projects .project h3{
     font-family: 'Rubik-medium';
@@ -254,7 +255,7 @@ body{
 }
 .section5_wrapper{
     width: 100%;
-    padding: 50px 0;
+    padding: 70px 0;
 }
 .section5_wrapper .section5 h2, .section6 h2{
     font-family: 'Rubik-medium';
@@ -271,7 +272,7 @@ body{
     flex-direction: column;
     justify-content: end;
     width: 30%;
-    border-radius: 20px;
+    border-radius: 10px;
     background: rgba(105, 133, 255, 0.3);
     background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     padding: 53px 30px;
@@ -318,7 +319,7 @@ footer{
 .silki{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .navigation, .tel, .mesto, .pochta {
     display: flex;
@@ -338,7 +339,7 @@ footer{
     font-size: 22px;
     color: #fff;
 }
-.silki button{
+.silki button, dialog .form_btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,6 +362,74 @@ footer{
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
 }
+dialog {
+    margin: auto auto;
+    background: rgba(105, 133, 255, 0.8);
+    width: 100%;
+    max-width: 600px;
+    height: 580px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease both;
+    border: none;
+    padding:45px;
+}
+dialog h2{
+    font-family: 'Rubik-medium';
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+dialog form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+dialog form input, textarea{
+    height: 50px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+dialog form textarea{
+    height: 150px;
+    resize:vertical
+}
+dialog form .form_btn{
+    background: rgba(105, 133, 255, 0.8);
+    margin: 10px auto;
+}
+dialog::backdrop {
+    animation: fadeIn 1s ease both;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 2;
+    backdrop-filter: blur(20px);
+}
+dialog .x {
+    filter: grayscale(1);
+    border: none;
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: ease filter, transform 0.3s;
+    cursor: pointer;
+    transform-origin: center;
+}
+dialog .x:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
 @media (max-width:1440px) {
     .container{
         max-width: 1024px;
