@@ -55,7 +55,7 @@ body{
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    gap: 48px;
+    gap: 25px;
 }
 .link{
     font-family: 'Rubik-regular';
@@ -93,6 +93,7 @@ body{
     align-items: center;
 }
 .section1 img{
+    padding-top: 150px;
     width: 100%;
     max-width: 250px;
 }
@@ -175,7 +176,7 @@ body{
 .section3 .cell{
     margin-top: 20px;
     width: 45%;
-    padding: 56px 60px 62px 60px;
+    padding: 36px 30px 32px 40px;
     background-color: rgba(105, 133, 255, 0.4);
     background-image: linear-gradient(135deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     border-radius: 10px;
@@ -183,7 +184,7 @@ body{
 .section3 .cell h3{
     font-family: 'Rubik-medium';
     font-size: 32px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 .section3 .cell li{
     font-family: 'Ubuntu-regular';
@@ -266,6 +267,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .section5_wrapper .section5 .table .cell{
     display: flex;
@@ -275,7 +277,8 @@ body{
     border-radius: 10px;
     background: rgba(105, 133, 255, 0.3);
     background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
-    padding: 53px 30px;
+    padding: 20px;
+    height: 220px
 }
 .section5_wrapper .section5 .table .cell h3{
     font-family: 'Ubuntu-regular';
@@ -290,9 +293,6 @@ body{
 .section5_wrapper .section5 .table .cell:hover p {
     animation: niceShow .7s ease-out forwards;
     margin-top: 20px
-}
-.section5_wrapper .section5 .table>.cell {
-    height: 250px
 }
 @keyframes niceShow {
     0% {
@@ -362,73 +362,6 @@ footer{
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
 }
-dialog {
-    margin: auto auto;
-    background: rgba(105, 133, 255, 0.8);
-    width: 100%;
-    max-width: 600px;
-    height: 580px;
-    border-radius: 10px;
-    animation: fadeIn 1s ease both;
-    border: none;
-    padding:45px;
-}
-dialog h2{
-    font-family: 'Rubik-medium';
-    font-weight: 500;
-    font-size: 32px;
-    color: #fff;
-    margin-bottom: 30px;
-}
-dialog form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-dialog form input, textarea{
-    height: 50px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-}
-dialog form textarea{
-    height: 150px;
-    resize:vertical
-}
-dialog form .form_btn{
-    background: rgba(105, 133, 255, 0.8);
-    margin: 10px auto;
-}
-dialog::backdrop {
-    animation: fadeIn 1s ease both;
-    background: rgba(255, 255, 255, 0.4);
-    z-index: 2;
-    backdrop-filter: blur(20px);
-}
-dialog .x {
-    filter: grayscale(1);
-    border: none;
-    background: none;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    transition: ease filter, transform 0.3s;
-    cursor: pointer;
-    transform-origin: center;
-}
-dialog .x:hover {
-    filter: grayscale(0);
-    transform: scale(1.1);
-}
-@keyframes fadeIn {
-    0% {
-    opacity: 0;
-    }
-    100% {
-    opacity: 1;
-    }
-}
 
 @media (max-width:1440px) {
     .container{
@@ -446,28 +379,36 @@ dialog .x:hover {
         max-width: 768px;
     }
     .links{
-        gap: 24px;
+        gap: 15px;
     }
     .link{
         font-size: 14px;
     }
     .section1 img{
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
     }
     .section1 p{
-        font-size: 18px;
+        font-size: 16px;
     }
-    .section1 button{
-        max-width: 180px;
+    .section1 .btn{
+        max-width: 150px;
         max-height: 48px;
         font-size: 16px;
     }
     .stadi{
-        gap: 50px;
+        gap: 20px;
+    }
+    .stadi .block img{
+        width: 100%;
+        max-width: 100px;
+    }
+    .stadi .block p{
+        font-size: 16px;
+        margin: 18px 0 0;
     }
     .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2{
-        font-size: 40px;
+        font-size: 30px;
     }
     .section2 p{
         font-size: 20px;
@@ -476,7 +417,7 @@ dialog .x:hover {
         font-size: 22px;
     }
     .section3 .cell{
-        padding: 36px 40px 42px 40px;
+        padding: 36px 30px 32px 40px;
     }
     .section3 .cell h3{
         font-size: 24px;
@@ -495,7 +436,9 @@ dialog .x:hover {
         font-size: 24px;
     }
     .section5_wrapper .section5 .table .cell{
-        padding: 30px 20px;
+        padding: 20px;
+        width: 32%;
+        height: 220px;
     }
     .details__title{
         font-size: 18px;
@@ -508,11 +451,6 @@ dialog .x:hover {
     }
     .silki .zaglav{
         font-size: 16px;
-    }
-    .silki button{
-        height: 45px;
-        max-width: 180px;
-        font-size: 14px;
     }
     .block p{
         font-size: 16px;
