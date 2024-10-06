@@ -196,11 +196,12 @@ body{
 .section4 h2{
     font-family: 'Rubik-medium';
     font-size: 58px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 .section4 .projects{
     display: flex;
     justify-content: space-around;
+    align-items: self-start;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -245,12 +246,9 @@ body{
 }
 @keyframes animatetop {
     from {
-        bottom: -300px;
         opacity: 0;
     }
-
     to {
-        bottom: 0;
         opacity: 1;
     }
 }
@@ -266,14 +264,14 @@ body{
 .section5_wrapper .section5 .table{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .section5_wrapper .section5 .table .cell{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 30%;
+    width: 300px;
     border-radius: 10px;
     background: rgba(105, 133, 255, 0.3);
     background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
@@ -417,42 +415,97 @@ footer{
         font-size: 22px;
     }
     .section3 .cell{
-        padding: 36px 30px 32px 40px;
+        padding: 20px 20px 20px 30px;
     }
-    .section3 .cell h3{
+    .section3 .cell h3, .section4 .projects .project h3, .section5_wrapper .section5 .table .cell h3{
         font-size: 24px;
     }
-    .section3 .cell li{
+    .section3 .cell li,.details__content, .section5_wrapper .section5 .table .cell p{
         font-size: 20px;
     }
-    .section4 h2{
-        margin-bottom: 80px;
+    .details__title{
+        font-size: 18px;
     }
     .section4 .projects .project .icon{
         width: 100%;
         max-width: 50px;
     }
-    .section4 .projects .project h3{
-        font-size: 24px;
-    }
     .section5_wrapper .section5 .table .cell{
-        padding: 20px;
-        width: 32%;
-        height: 220px;
+        height: 200px;
     }
-    .details__title{
-        font-size: 18px;
-    }
-    .details__content{
-        font-size: 16px;
-    }
-    .silki p,  .silki a{
-        font-size: 14px;
+    .section5_wrapper .section5 .table{
+        gap: 40px;
     }
     .silki .zaglav{
         font-size: 16px;
     }
-    .block p{
+    .footer_content p{
+        font-size: 14px;
+    }
+}
+@media (max-width:768px) {
+    .container{
+        max-width: 568px;
+    }
+    .links{
+        gap: 5px;
+    }
+    .link{
+        font-size: 12px;
+    }
+    .section1 img{
+        max-width: 175px;
+    }
+    .section1 p{
+        font-size: 12px;
+    }
+    .section1 .btn{
+        max-width: 125px;
+        max-height: 40px;
+        font-size: 14px;
+    }
+    .stadi{
+        gap: 15px;
+    }
+    .stadi .block p{
+        font-size: 14px;
+        margin: 13px 0 0;
+    }
+    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2{
+        font-size: 25px;
+    }
+    .section2 p{
+        font-size: 15px;
+    }
+    .section2 span{
+        font-size: 17px;
+    }
+    .section3 .cell{
+        padding: 26px 20px 22px 35px;
+    }
+    .section3 .cell h3, .section4 .projects .project h3, .section5_wrapper .section5 .table .cell h3{
+        font-size: 20px;
+    }
+    .section3 .cell li,.details__content, .section5_wrapper .section5 .table .cell p{
+        font-size: 15px;
+    }
+    .details__title{
         font-size: 16px;
+    }
+    .section4 .projects .project .icon{
+        width: 100%;
+        max-width: 50px;
+    }
+    .section5_wrapper .section5 .table .cell{
+        height: 150px;
+    }
+    .silki .zaglav{
+        font-size: 16px;
+    }
+    .footer_content p{
+        font-size: 14px;
+    }
+    .navigation{
+        display: none;
     }
 }
