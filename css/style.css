@@ -51,6 +51,7 @@ body{
     align-items: center;
     z-index: 1;
 }
+
 .links{
     display: grid;
     justify-items: center;
@@ -359,8 +360,11 @@ footer{
     font-family: 'Ubuntu-regular';
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
+    text-align: center;
 }
-
+.header__burger{
+    display: none;
+}
 @media (max-width:1440px) {
     .container{
         max-width: 1024px;
@@ -370,6 +374,7 @@ footer{
     }
     .menu_logo{
         height: 3em;
+        z-index: 2;
     }
 }
 @media (max-width:1024px) {
@@ -447,8 +452,63 @@ footer{
     .container{
         max-width: 568px;
     }
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 1;
+    }
+    .header__burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span{
+        transform: scale(0);
+    }
+    .header__burger span{
+        position: absolute;
+        background-color:#fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .header__burger::before, .header__burger::after{
+        content: '';
+        background-color:#fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
     .links{
-        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: fixed;
+        top: -250px;
+        left: 0px;
+        width: 100%;
+        background-color: #879DFF;
+        padding: 70px 50px 30px;
+        transition: all 0.3s ease-in-out 0s;
+        gap: 20px;
+    }
+    .links.active{
+        top: 0;
     }
     .link{
         font-size: 12px;
@@ -498,6 +558,141 @@ footer{
     }
     .section5_wrapper .section5 .table .cell{
         height: 150px;
+    }
+    .silki .zaglav{
+        font-size: 16px;
+    }
+    .footer_content p{
+        font-size: 14px;
+    }
+    .navigation{
+        display: none;
+    }
+}
+@media (max-width: 426px) {
+    .container{
+        max-width: 375px;
+    }
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 1;
+    }
+    .header__burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span{
+        transform: scale(0);
+    }
+    .header__burger span{
+        position: absolute;
+        background-color:#fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .header__burger::before, .header__burger::after{
+        content: '';
+        background-color:#fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: fixed;
+        top: -250px;
+        left: 0px;
+        width: 100%;
+        background-color: #879DFF;
+        padding: 70px 50px 30px;
+        transition: all 0.3s ease-in-out 0s;
+        gap: 20px;
+    }
+    .links.active{
+        top: 0;
+    }
+    .link{
+        font-size: 12px;
+    }
+    .section1 img{
+        max-width: 150px;
+    }
+    .section1 p{
+        font-size: 11px;
+    }
+    .section1 .btn{
+        max-width: 125px;
+        max-height: 40px;
+        font-size: 12px;
+    }
+    .stadi{
+        gap: 15px;
+    }
+    .stadi .block p{
+        font-size: 12px;
+        margin: 10px 0 0;
+    }
+    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2, .section5_wrapper .section5 h2{
+        font-size: 22px;
+    }
+    .section2 p{
+        font-size: 13px;
+    }
+    .section2 span{
+        font-size: 15px;
+    }
+    .section3 .cell{
+        padding: 26px 20px 22px 35px;
+        width: 80%;
+        margin: 0;
+    }
+    .section3 .cell h3, .section4 .projects .project h3, .section5_wrapper .section5 .table .cell h3{
+        font-size: 18px;
+    }
+    .section3 .cell li,.details__content, .section5_wrapper .section5 .table .cell p{
+        font-size: 13px;
+    }
+    .details__title{
+        font-size: 14px;
+    }
+    .section3, .section4, .section5_wrapper, .section6{
+        padding: 30px 0;
+    }
+    .section4 .projects .project{
+        width: 80%;
+    }
+    .section4 .projects .project .icon{
+        width: 100%;
+        max-width: 50px;
+    }
+    .section5_wrapper .section5 .table .cell{
+        height: 150px;
+    }
+    .silki{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
     }
     .silki .zaglav{
         font-size: 16px;

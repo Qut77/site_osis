@@ -14,3 +14,16 @@ document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click
   });
 }));
 
+const headerBurger = document.querySelector('.header__burger');
+const links = document.querySelectorAll('.links a');
+headerBurger.addEventListener('click', function(event) {
+  headerBurger.classList.toggle('active');
+  document.querySelector('.links').classList.toggle('active');
+});
+
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+    headerBurger.classList.remove('active');
+    document.querySelector('.links').classList.remove('active');
+  });
+});
