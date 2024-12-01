@@ -55,7 +55,7 @@ body{
 .links{
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 .link{
@@ -165,8 +165,7 @@ body{
 }
 .section3 .prob_cont{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 50px;
 }
 .section3 h2{
@@ -174,26 +173,37 @@ body{
     font-size: 58px;
     margin-bottom: 50px;
 }
-.section3 .cell{
+.section3 .cell {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
     margin-top: 20px;
-    width: 45%;
+    width: 32%;
     padding: 36px 30px 32px 40px;
     background-color: rgba(105, 133, 255, 0.4);
     background-image: linear-gradient(135deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
     border-radius: 10px;
+    transition: max-height 0.5s ease-in-out;
 }
-.section3 .cell h3{
+.section3 .cell h3 {
     font-family: 'Rubik-medium';
-    font-size: 32px;
+    font-size: 25px;
     margin-bottom: 25px;
 }
-.section3 .cell li{
+.section3 .cell p {
     font-family: 'Ubuntu-regular';
-    font-size: 22px;
+    font-size: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.section3 .cell:hover p {
+    max-height: 500px;
 }
 .section4{
     padding: 70px 0 70px;
 }
+
 .section4 h2{
     font-family: 'Rubik-medium';
     font-size: 58px;
@@ -253,57 +263,13 @@ body{
         opacity: 1;
     }
 }
-.section5_wrapper{
-    width: 100%;
-    padding: 70px 0;
+.section6{
+    padding: 50px 0;
 }
-.section5_wrapper .section5 h2, .section6 h2{
+.section6 h2{
     font-family: 'Rubik-medium';
     font-size: 50px;
     margin-bottom: 50px;
-}
-.section5_wrapper .section5 .table{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.section5_wrapper .section5 .table .cell{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 400px;
-    border-radius: 10px;
-    background: rgba(105, 133, 255, 0.3);
-    background-image: linear-gradient(90deg, rgba(105, 133, 255, 0.3) 0%, rgba(252, 171, 94, 0.4) 100%);
-    padding: 20px;
-    height: 220px
-}
-.section5_wrapper .section5 .table .cell h3{
-    font-family: 'Ubuntu-regular';
-    font-size: 28px;
-}
-.section5_wrapper .section5 .table .cell p{
-    font-family: 'Ubuntu-regular';
-    font-size: 18px;
-    max-height: 0;
-    overflow: hidden;
-}
-.section5_wrapper .section5 .table .cell:hover p {
-    animation: niceShow .7s ease-out forwards;
-    margin-top: 20px
-}
-@keyframes niceShow {
-    0% {
-        max-height: 0
-    }
-
-    100% {
-        max-height: 100%
-    }
-}
-.section6{
-    padding: 50px 0;
 }
 footer{
     background: rgba(105, 133, 255, 0.8);
@@ -376,9 +342,6 @@ footer{
         height: 3em;
         z-index: 2;
     }
-    .section5_wrapper .section5 .table .cell{
-        width: 300px;
-    }
 }
 @media (max-width:1024px) {
     .container{
@@ -413,7 +376,7 @@ footer{
         font-size: 16px;
         margin: 18px 0 0;
     }
-    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2{
+    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section6 h2{
         font-size: 30px;
     }
     .section2 p{
@@ -422,29 +385,29 @@ footer{
     .section2 span{
         font-size: 22px;
     }
+    .section3 .prob_cont{
+        gap: 25px;
+    }
     .section3 .cell{
         padding: 20px 20px 20px 30px;
     }
-    .section3 .cell h3, .section4 .projects .project h3, .section5_wrapper .section5 .table .cell h3{
-        font-size: 24px;
-    }
-    .section3 .cell li,.details__content, .section5_wrapper .section5 .table .cell p{
+    .section3 .cell h3, .section4 .projects .project h3{
         font-size: 20px;
+    }
+    .section3 .cell p,.details__content{
+        font-size: 16px;
     }
     .details__title{
         font-size: 18px;
+    }
+    .section4 .projects{
+        gap: 25px;
     }
     .section4 .projects .project .icon{
         width: 100%;
         max-width: 50px;
     }
-    .section5_wrapper .section5 .table .cell{
-        height: 200px;
-    }
-    .section5_wrapper .section5 .table{
-        gap: 40px;
-    }
-    .silki .zaglav{
+    .silki .zaglav, .navigation a{
         font-size: 16px;
     }
     .footer_content p{
@@ -534,7 +497,7 @@ footer{
         font-size: 14px;
         margin: 13px 0 0;
     }
-    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2{
+    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section6 h2{
         font-size: 25px;
     }
     .section2 p{
@@ -544,12 +507,12 @@ footer{
         font-size: 17px;
     }
     .section3 .cell{
-        padding: 26px 20px 22px 35px;
+        padding: 15px 25px 5px 15px;
     }
-    .section3 .cell h3, .section4 .projects .project h3, .section5_wrapper .section5 .table .cell h3{
-        font-size: 20px;
+    .section3 .cell h3, .section4 .projects .project h3{
+        font-size: 18px;
     }
-    .section3 .cell li,.details__content, .section5_wrapper .section5 .table .cell p{
+    .section3 .cell p,.details__content{
         font-size: 15px;
     }
     .details__title{
@@ -655,7 +618,7 @@ footer{
         font-size: 12px;
         margin: 10px 0 0;
     }
-    .section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2, .section5_wrapper .section5 h2{
+    .section1 h2, .section2 h2, .section3 h2, .section4 h2 .section6 h2{
         font-size: 22px;
     }
     .section2 p{
@@ -664,21 +627,24 @@ footer{
     .section2 span{
         font-size: 15px;
     }
+    .section3 .prob_cont{
+        flex-wrap: wrap;
+    }
     .section3 .cell{
-        padding: 26px 20px 22px 35px;
+        padding: 16px 15px 12px 25px;
         width: 80%;
         margin: 0;
     }
-    .section3 .cell h3, .section4 .projects .project h3, .section5_wrapper .section5 .table .cell h3{
+    .section3 .cell h3, .section4 .projects .project h3{
         font-size: 18px;
     }
-    .section3 .cell li,.details__content, .section5_wrapper .section5 .table .cell p{
+    .section3 .cell li,.details__content{
         font-size: 13px;
     }
     .details__title{
         font-size: 14px;
     }
-    .section3, .section4, .section5_wrapper, .section6{
+    .section3, .section4, .section6{
         padding: 30px 0;
     }
     .section4 .projects .project{
@@ -687,9 +653,6 @@ footer{
     .section4 .projects .project .icon{
         width: 100%;
         max-width: 50px;
-    }
-    .section5_wrapper .section5 .table .cell{
-        height: 150px;
     }
     .silki{
         flex-direction: column;
